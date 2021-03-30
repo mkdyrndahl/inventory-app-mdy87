@@ -3,11 +3,11 @@ import {getInventory, addToCart, deleteItem} from '../../Services/inventoryServi
 import InventoryList from '../InventoryList/InventoryList'
 
 function DivContainer(){
-    const [items, setInventory] = useState([])
+    const [items, setItems] = useState([])
     const [cart, setCart] = useState([])
 
     useEffect(()=>{
-        getInventory().then(json=>setInventory(json))
+        getInventory().then(json=>setItems(json))
     },[])
 
     const addItemToCart = sku => {
@@ -22,7 +22,7 @@ function DivContainer(){
         <div className="container">
             <div className="row justify=content-md-center">
                 <div className="col col-lg-2">
-                    <InventoryList items={items} addItem={addItemToCart} deleteItem={deleteItemFromCart} />
+                    <InventoryList items={items} /*addItem={addItemToCart} deleteItem={deleteItemFromCart}*/ />
                 </div>
             </div>
         </div>

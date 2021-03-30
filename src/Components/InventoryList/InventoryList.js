@@ -16,7 +16,7 @@ function InventoryList(props)   {
                     </tr>
                 </thead>
                 <tbody>
-                    {props.items.map((item) => <Item key={item.sku} Item={item} sku={item.sku} name={item.name} price={item.price} quantity={item.quantity} addItem={props.addItem} removeItem={props.removeItem} />)}
+                    {props.items.map((item) => <Item key={item.sku} Item={item} sku={item.sku} name={item.name} price={item.price} quantity={item.quantity} /*addItem={props.addItem} removeItem={props.removeItem}*/ />)}
                 </tbody>
             </table>
         </div>
