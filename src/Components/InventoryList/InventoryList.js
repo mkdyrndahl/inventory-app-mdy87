@@ -11,8 +11,8 @@ function InventoryList(props)   {
                         <th scope="col">Name</th>
                         <th scope="col">Price</th>
                         <th scope="col">Quantity</th>
-                        <th scope="col">Add to Cart</th>
-                        <th scope="col">Remove from Cart</th>
+                        {/*<th scope="col">Add to Cart</th>
+                        <th scope="col">Remove from Cart</th>*/}
                     </tr>
                 </thead>
                 <tbody>

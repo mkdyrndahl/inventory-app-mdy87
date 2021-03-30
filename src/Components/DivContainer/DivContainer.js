@@ -3,26 +3,27 @@ import {getInventory, addToCart, deleteItem} from '../../Services/inventoryServi
 import InventoryList from '../InventoryList/InventoryList'
 
 function DivContainer(){
-    const [items, setItems] = useState([])
+    const [inv, setInv] = useState([])
     const [cart, setCart] = useState([])
 
     useEffect(()=>{
-        getInventory().then(json=>setItems(json))
+        getInventory().then(inventory=>setInv(inventory))
     },[])
 
     const addItemToCart = sku => {
-        addToCart(sku).then(json=>setCart(json))
+        addToCart(sku).then(cartItems=>setCart(cartItems))
     }
 
     const deleteItemFromCart = sku => {
-        deleteItem(sku).then(json=>setCart(json))
+        deleteItem(sku).then(cartItems=>setCart(cartItems))
     }
 
     return(
         <div className="container">
             <div className="row justify=content-md-center">
                 <div className="col col-lg-2">
-                    <InventoryList items={items} /*addItem={addItemToCart} deleteItem={deleteItemFromCart}*/ />
+                    <InventoryList items={inv} /*addItem={addItemToCart} deleteItem={deleteItemFromCart}*/ />
+                    {/* Cart goes here */}
                 </div>
             </div>
         </div>
