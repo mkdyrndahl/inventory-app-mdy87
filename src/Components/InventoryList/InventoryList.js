@@ -21,5 +21,7 @@ function InventoryList(props)   {
             </table>
         </div>
     )
-    export default InventoryList
+    
 }
+
+export default InventoryList
